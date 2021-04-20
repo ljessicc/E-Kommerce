@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ecommerce-429bd": {
+      "hosting": {
+        "E-kommerce": [
+          "ecommerce-429bd"
+        ]
+      }
+    }
+  }
+}

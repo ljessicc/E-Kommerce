@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule , Title} from '@angular/platform-browser';
 
+// importing the firebase authentication module
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +38,7 @@ import { LayoutComponent } from './header/layout/layout.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireAuthModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
