@@ -3,6 +3,10 @@ import { BrowserModule , Title} from '@angular/platform-browser';
 
 // importing the firebase authentication module
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
+// imports reactive forms(form with better maneability)
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './header/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { LayoutComponent } from './header/layout/layout.component'
+import { LayoutComponent } from './header/layout/layout.component';
+import { LoginComponent } from './login/login.component'
+import { AngularFireModule } from '@angular/fire';
 
 
 
@@ -33,12 +39,15 @@ import { LayoutComponent } from './header/layout/layout.component'
     AdminComponent,
     UsersComponent,
     NavComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,

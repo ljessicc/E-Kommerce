@@ -1,0 +1,19 @@
+<h2>login to connect to admin</h2>
+
+<div class="form-container">
+    <form [formGroup]="profileForm" class="login-form" (ngSubmit)="login()">
+
+        <label>
+          Email:
+          <input type="email" class="email-in" placeholder="email here ................." formControlName="email" required>
+        </label>
+      
+        <label>
+          Password:
+          <input type="password" class="pass-in" placeholder="password ................." formControlName="password" required>
+        </label>
+      
+        <button type="submit" class="login-btn" [class.unactive]="!profileForm.valid" [disabled]="!profileForm.valid">login</button>
+      </form>
+    
+</div>
